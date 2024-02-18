@@ -1,0 +1,25 @@
+[nz-menu] {
+  width: 200px;
+  background-color: rgb(143, 13, 236);
+  color: black;
+  position: fixed;
+}
+[nzTitle] {
+  color: black;
+}
+
+[nz-menu-group] {
+  background-color: rgb(143, 13, 236);
+  color: black;
+}
+
+[nz-menu-item]  {
+  background-color: rgb(143, 13, 236);
+}
+ul li ul li ul li:hover {
+  background-color: rgb(127,127,255);
+  color: black;
+}
+ul li ul li ul {
+  background-color: rgb(143, 13, 236);
+}

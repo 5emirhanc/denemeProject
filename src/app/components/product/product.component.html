@@ -1,0 +1,25 @@
+@if (!photos) {
+    <div class="example">
+       <nz-spin [nzSize]="'large'" nzTip="Loading" nzSimple></nz-spin>
+    </div>
+}
+
+@for (photos of photos; track photos) {
+    <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+        <div *cdkVirtualFor="let item of items; let i = index " class="example-item">
+            <div nz-row>
+                <div nz-col nzSpan="24">
+                    <a [routerLink]="photos.id" (click)="showModal()">{{photos.url}}</a>
+                </div>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+    
+
+
+}
+<nz-modal [(nzVisible)]="isVisible" nzTitle="Product Detail" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+    <ng-container *nzModalContent>
+        <app-product-detail></app-product-detail>
+    </ng-container>
+  </nz-modal>
